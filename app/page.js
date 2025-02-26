@@ -20,7 +20,8 @@ export default function Home() {
       {/* nav and slide */}
       <div className=" mt-1 bg-[#393838]">
         <div className="max-w-screen-2xl py-5 mx-auto px-5 sm:px-10 xl:px-20 flex items-center">
-          <div className="flex-1 flex gap-2 items-center text-base  md:text-xl lg:text-xl text-white text-center">
+          <a href="/" className="flex-1 flex gap-2 items-center text-base  md:text-xl lg:text-xl text-white text-center">
+            
             <Image
               src="/assets/images/logo.png"
               width={90}
@@ -33,7 +34,7 @@ export default function Home() {
               <br />
               <span className="font-normal">National Institute Of Education{" "}</span> 
             </p>
-          </div>
+          </a>
          <MyHeader/>
          <MyMenuHeader/>
         </div>
@@ -52,7 +53,7 @@ export default function Home() {
           <div className="md:shrink-0">
             <Image
               className="w-full object-cover aspect-video"
-              src="/assets/images/koha2.png"
+              src="/assets/images/library.jpg"
               alt="Team"
               width={200}
               height={200}
@@ -79,23 +80,27 @@ export default function Home() {
 
       {/*Categories */}
       <div className="max-w-screen-2xl my-10 mx-auto px-2 sm:px-10 lg:px-20">
-        <button
-            className="relative mb-3 md:my-5">
-            <span className="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-yellow-500"></span>
-            <span className="fold-bold text-xl md:text-2xl relative inline-block h-full w-full pointer-events-none rounded border-2 border-black bg-white px-3 py-1 text-black transition duration-100 hover:bg-slate-400 hover:text-white">Our Database</span>
-        </button>
-        <div className="flex overflow-x-auto bg-slate-400 rounded-lg scroll-smooth scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-500">
+      <div className="flex">
+      <h2 className="text-xl md:text-2xl text-center lg:text-2xl text-black my-5 tracking-wide 
+  after:content-[''] after:block after:w-24 md:after:w-32 after:h-1 after:bg-red-500 
+  after:mx-auto after:mt-2 after:transition-all after:duration-300 
+  hover:after:w-28 md:hover:after:w-36">
+  Our Database
+</h2>
+      </div>
+
+        <div className="flex p-2 overflow-x-auto bg-slate-400 rounded-lg scroll-smooth scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-500">
         {/* Repeat this block for each category */}
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
-              src="/assets/images/video.png"
+              src="/assets/images/audio.png"
               width={300}
               height={300}
               className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
               alt="image"
             />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
+            <p className="text-center text-[12px] md:text-sm">Audios</p>
           </div>
         </button>
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
@@ -113,75 +118,65 @@ export default function Home() {
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
-              src="/assets/images/video.png"
+              src="/assets/images/epublication.png"
               width={300}
               height={300}
               className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
               alt="image"
             />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
+            <p className="text-center text-[12px] md:text-sm">
+            E-Publications</p>
           </div>
         </button>
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
-              src="/assets/images/video.png"
+              src="/assets/images/bulletin.png"
               width={300}
               height={300}
               className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
               alt="image"
             />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
+            <p className="text-center text-[12px] md:text-sm">Bulletins</p>
           </div>
         </button>
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
-              src="/assets/images/video.png"
+              src="/assets/images/sociology.png"
               width={300}
               height={300}
               className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
               alt="image"
             />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
+            <p className="text-center text-[12px] md:text-sm">Sociology</p>
           </div>
         </button>
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
-              src="/assets/images/video.png"
+              src="/assets/images/stack-books.png"
               width={300}
               height={300}
               className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
               alt="image"
             />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
+            <p className="text-center text-[12px] md:text-sm">Books</p>
           </div>
         </button>
         <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
-              src="/assets/images/video.png"
+              src="/assets/images/image.png"
               width={300}
               height={300}
               className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
               alt="image"
             />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
+            <p className="text-center text-[12px] md:text-sm">Images</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
-          <div className="flex flex-col items-center justify-center">
-            <Image
-              src="/assets/images/video.png"
-              width={300}
-              height={300}
-              className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mb-2 object-cover"
-              alt="image"
-            />
-            <p className="text-center text-[12px] md:text-sm">Videos</p>
-          </div>
-        </button>
+      
         {/* Repeat the above block for other categories */}
         </div>
       </div>

@@ -7,13 +7,13 @@ const MyView = () => {
       <div className=' flex-1 p-6 xl:pl-20'>
         <div className='flex flex-col '>
             <div>
-            <h1 className='text-2xl font-bold mb-4'>Becoming good at reading</h1>
+            <h1 className='text-2xl font-bold mb-4'>Good to Great: Why Some Companies Make the Leap...And Others Don't</h1>
            
             </div>
         <img 
-          src='/assets/images/book3.webp' 
+          src='/assets/images/book4.webp' 
           alt='Placeholder' 
-          className='w-full  h-auto rounded-lg shadow-md my-5'
+          className='w-[50%] h-auto aspect-[6/9] rounded-lg shadow-md my-5'
         />
          <p className='text-gray-700 mb-2 text-xl'>
             Becoming good at reading requires a combination of consistent practice and the right approach. Start by choosing materials that genuinely interest you, as this makes reading enjoyable and keeps you motivated. Set aside dedicated time each day to read, even if it’s just a few pages, to build a habit. Improve your comprehension by reading actively—highlight key points, take notes, or summarize what you’ve read to reinforce understanding. Expanding your vocabulary through context or by looking up unfamiliar words also enhances your reading skills. Lastly, challenge yourself by exploring different genres and more complex texts over time to broaden your knowledge and adaptability as a reader.

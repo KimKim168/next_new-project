@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const books = [
-  { id: 1, title: "Her chosen career is as a professional pilot, she has worked in a variety of aviation capacities from instruction to airline flying, and is the author of several aviation text books.", image: "/assets/images/book1.webp" },
-  { id: 2, title: "Her chosen career is as a professional pilot, she has worked in a variety of aviation capacities from instruction to airline flying, and is the author of several aviation text books.", image: "/assets/images/book2.webp" },
-  { id: 3, title: "Her chosen career is as a professional pilot, she has worked in a variety of aviation capacities from instruction to airline flying, and is the author of several aviation text books.", image: "/assets/images/book1.webp" },
+  { id: 1, title: "Becoming good at reading", image: "/assets/images/book3.webp"},
+  { id: 2, title: "Cambodia Book Fair", image: "/assets/images/book2.webp" },
+  { id: 3, title: "Cambodia to Make E-Invoicing Mandatory Next Year", image: "/assets/images/book1.webp" },
 ];
 
 const MyNews = () => {

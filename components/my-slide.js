@@ -8,7 +8,7 @@ import Image from "next/image";
 export function MySlide() {
   const images = [
     { id: "1", image: "/assets/images/slide1.png", alt: "Slide 1" },
-    { id: "2", image: "/assets/images/slide2.png", alt: "Slide 2" },
+    // { id: "2", image: "/assets/images/slide2.webp", alt: "Slide 2" },
     { id: "3", image: "/assets/images/slide3.png", alt: "Slide 3" },
   ];
 
@@ -32,13 +32,13 @@ export function MySlide() {
         <div className="flex">
           {images.map((item) => (
             <div key={item.id} className="flex-[0_0_100%]">
-              <Card className="w-full rounded-none aspect-[32/9]">
+              <Card className="w-full rounded-none aspect-[21/8]">
                 <Image
                   src={item.image}
                   alt={item.alt}
                   width={1920}
                   height={540}
-                  className="aspect-[32/9] object-cover"
+                  className="aspect-[21/8] object-cover"
                   priority
                 />
               </Card>
