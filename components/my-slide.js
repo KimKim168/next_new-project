@@ -7,9 +7,9 @@ import Image from "next/image";
 
 export function MySlide() {
   const images = [
-    { id: "1", image: "/assets/images/slide1.jpg", alt: "Slide 1" },
-    { id: "2", image: "/assets/images/slide2.jpg", alt: "Slide 2" },
-    { id: "3", image: "/assets/images/slide3.jpg", alt: "Slide 3" },
+    { id: "1", image: "/assets/images/slide1.png", alt: "Slide 1" },
+    { id: "2", image: "/assets/images/slide2.png", alt: "Slide 2" },
+    { id: "3", image: "/assets/images/slide3.png", alt: "Slide 3" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);

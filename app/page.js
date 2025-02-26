@@ -52,7 +52,7 @@ export default function Home() {
           <div className="md:shrink-0">
             <Image
               className="w-full object-cover aspect-video"
-              src="/assets/images/slide1.jpg"
+              src="/assets/images/koha2.png"
               alt="Team"
               width={200}
               height={200}
