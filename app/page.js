@@ -1,106 +1,53 @@
-import { Button } from "@/components/ui/button";
-import { MySlide } from "@/components/my-slide";
+
 import { Phone } from "lucide-react";
 import Image from "next/image";
 import BookList from "@/components/my-new";
 import MyNews from "@/components/my-news";
+import MyHeader from "@/components/header/my-header";
+import MyMenuHeader from "@/components/header/my-menu-header";
+import MySearch from "@/components/my-search";
+import { MySlide } from "@/components/my-slide";
 
 export default function Home() {
+ 
   return (
     <>
-      <div className="flex items-center justify-end gap-2 max-w-screen-2xl md:px-20 mt-3">
+      <div className="flex items-center justify-end gap-2 max-w-screen-2xl px-5 sm:px-10 xl:px-20 mt-1">
         <Phone width={15} height={15} />
         <p>010 775589 -</p>
         <a href="#">Student Login</a>
       </div>
       {/* nav and slide */}
-      <div className=" mt-3 bg-[#545454]">
-        <div className="max-w-screen-2xl py-5 mx-auto px-10 lg:px-20 flex items-center">
-          <div className="flex-1 flex gap-2 items-center text-2xl text-white text-center">
+      <div className=" mt-1 bg-[#393838]">
+        <div className="max-w-screen-2xl py-5 mx-auto px-5 sm:px-10 xl:px-20 flex items-center">
+          <div className="flex-1 flex gap-2 items-center text-base  md:text-xl lg:text-xl text-white text-center">
             <Image
               src="/assets/images/logo.png"
               width={90}
               height={90}
               alt="logo"
+              className="w-14 h-16 md:w-20 md:h-24"
             />
-            <p>
+            <p className="font-semibold">
               វិទ្យាស្ថានជាតិអប់រំ
               <br />
-              National Institute Of Education{" "}
+              <span className="font-normal">National Institute Of Education{" "}</span> 
             </p>
           </div>
-          <div>
-            <ul className="flex space-x-2 text-white">
-              <li className="text-base border-r pr-2 border-white">Home</li>
-              <li className="text-base border-r pr-2 border-white">About</li>
-              <li className="text-base border-r pr-2 border-white">
-                Cellections
-              </li>
-              <li className="text-base border-r pr-2 border-white">
-                Resources
-              </li>
-              <li className="text-base border-r pr-2 border-white">Database</li>
-              <li className="text-base border-r pr-2 border-white">
-                Contac Us
-              </li>
-            </ul>
-          </div>
+         <MyHeader/>
+         <MyMenuHeader/>
         </div>
         <div>
-          <MySlide />
+          <MySlide/>
         </div>
         {/* Search */}
-        <div className="max-w-screen-2xl mx-auto px-10 lg:px-20 py-3">
-          <p className="text-3xl text-white">One Search</p>
-          <label
-            className="mx-auto relative mt-3 bg-white min-w-sm max-w-screen-2xl flex flex-col md:flex-row items-center justify-center border pl-2 rounded-full gap-2 shadow-2xl focus-within:border-gray-300"
-            htmlFor="search-bar"
-          >
-            <input
-              id="search-bar"
-              placeholder="Search By: Tittle, ISBN, Author..."
-              className="px-6 py-2 w-full rounded-md flex-1 outline-none bg-white"
-            />
-            <Button className="w-full md:w-auto px-2.5 py-2 rounded-full bg-yellow-400 border-yellow-500 text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative transition-all disabled:opacity-70">
-              <div className="relative">
-                {/* Loading animation change opacity to display */}
-                <div className="flex items-center justify-center h-3 w-3 absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 transition-all">
-                  <svg
-                    className="opacity-0 animate-spin w-full h-full"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                </div>
-                <div className="flex items-center transition-all opacity-1 valid:">
-                  <span className="text-sm font-semibold whitespace-nowrap truncate mx-auto">
-                    Go
-                  </span>
-                </div>
-              </div>
-            </Button>
-          </label>
-        </div>
+        <MySearch/>
         {/*End Search */}
       </div>
       {/*End nav and slide */}
 
       {/* Card with image */}
-      <div className="max-w-screen-2xl mt-10 mx-auto px-10 lg:px-20 bg-white  overflow-hidden">
+      <div className="max-w-screen-2xl mt-3 md:mt-10 mx-auto px-3 sm:px-10 lg:px-20 bg-white  overflow-hidden">
         <div className="md:flex">
           <div className="md:shrink-0">
             <Image
@@ -111,8 +58,8 @@ export default function Home() {
               height={200}
             />
           </div>
-          <div className="p-8">
-            <div className="tracking-wide text-2xl text-black font-semibold">
+          <div className="md:px-8 mt-2 md:mt-0">
+            <div className="tracking-wide text-xl md:text-2xl text-black font-semibold">
               Digital Library
             </div>
             <p className="mt-2 text-slate-700">
@@ -131,11 +78,15 @@ export default function Home() {
       {/*End Card with image */}
 
       {/*Categories */}
-      <div className="max-w-screen-2xl my-10 mx-auto px-10 lg:px-20">
-        <p className="text-3xl text-black">Our Database</p>
-        <div className="flex overflow-x-auto mt-10 scroll-smooth scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-500">
+      <div className="max-w-screen-2xl my-10 mx-auto px-2 sm:px-10 lg:px-20">
+        <button
+            className="relative mb-3 md:my-5">
+            <span className="absolute top-0 left-0 mt-1 ml-1 h-full w-full rounded bg-yellow-500"></span>
+            <span className="fold-bold text-xl md:text-2xl relative inline-block h-full w-full pointer-events-none rounded border-2 border-black bg-white px-3 py-1 text-black transition duration-100 hover:bg-slate-400 hover:text-white">Our Database</span>
+        </button>
+        <div className="flex overflow-x-auto bg-slate-400 rounded-lg scroll-smooth scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-500">
         {/* Repeat this block for each category */}
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -147,7 +98,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -159,7 +110,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -171,7 +122,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -183,7 +134,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -195,7 +146,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -207,7 +158,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -219,7 +170,7 @@ export default function Home() {
             <p className="text-center text-[12px] md:text-sm">Videos</p>
           </div>
         </button>
-        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-slate-400 py-4 rounded-md hover:text-white">
+        <button className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
           <div className="flex flex-col items-center justify-center">
             <Image
               src="/assets/images/video.png"
@@ -241,6 +192,7 @@ export default function Home() {
       {/* News */}
       <MyNews/>
       {/*End News */}
+  
     </>
   );
 }

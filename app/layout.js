@@ -1,5 +1,12 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import MyFooter, { Footer } from "@/components/my-footer";
+import { Phone } from "lucide-react";
+import MyHeader from "@/components/header/my-header";
+import MyMenuHeader from "@/components/header/my-menu-header";
+import MySearch from "@/components/my-search";
+import { MySlide } from "@/components/my-slide";
 
 import { Kantumruy_Pro } from "next/font/google";
 
@@ -29,7 +36,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${kantumruyPro.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      
         {children}
+         {/* Footer */}
+      <Footer/>
+      {/*End Footer */}
       </body>
     </html>
   );
