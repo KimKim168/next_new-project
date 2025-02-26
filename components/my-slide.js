@@ -32,13 +32,13 @@ export function MySlide() {
         <div className="flex">
           {images.map((item) => (
             <div key={item.id} className="flex-[0_0_100%]">
-              <Card className="w-full rounded-none aspect-[21/8]">
+              <Card className="w-full rounded-none aspect-[32/9]">
                 <Image
                   src={item.image}
                   alt={item.alt}
                   width={1920}
                   height={540}
-                  className="aspect-[21/8] object-cover"
+                  className="aspect-[32/9] object-cover"
                   priority
                 />
               </Card>
