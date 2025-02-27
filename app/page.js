@@ -1,5 +1,5 @@
 
-import { Phone } from "lucide-react";
+import { Phone, User } from "lucide-react";
 import Image from "next/image";
 import BookList from "@/components/my-new";
 import MyNews from "@/components/my-news";
@@ -7,15 +7,17 @@ import MyHeader from "@/components/header/my-header";
 import MyMenuHeader from "@/components/header/my-menu-header";
 import MySearch from "@/components/my-search";
 import { MySlide } from "@/components/my-slide";
+import { MyLanguageSwitcher } from "@/components/my-language-switcher";
 
 export default function Home() {
  
   return (
     <>
       <div className="flex items-center justify-end gap-2 max-w-screen-2xl px-5 sm:px-10 xl:px-20 mt-1">
+      <MyLanguageSwitcher/>
         <Phone width={15} height={15} />
         <p>010 775589 -</p>
-        <a href="#">Student Login</a>
+        <User/><a href="#"> Student Login</a>
       </div>
       {/* nav and slide */}
       <div className=" mt-1 bg-[#393838]">
@@ -85,7 +87,7 @@ export default function Home() {
   after:content-[''] after:block after:w-24 md:after:w-32 after:h-1 after:bg-red-500 
   after:mx-auto after:mt-2 after:transition-all after:duration-300 
   hover:after:w-28 md:hover:after:w-36">
-  Our Database
+  Our Databases
 </h2>
       </div>
 

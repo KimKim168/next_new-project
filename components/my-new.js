@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const books = [
   { id: 1, title: "Good to Great: Why Some Companies Make the Leap...And Others Don't", image: "/assets/images/book4.webp" },
@@ -23,12 +24,12 @@ const BookList = () => {
   after:content-[''] after:block after:w-12 md:after:w-24 after:h-1 after:bg-red-500 
   after:mx-auto after:mt-2 after:transition-all after:duration-300 
   hover:after:w-16 md:hover:after:w-28">
-  New Book
+  New Books
 </h2>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
         {books.map((book) => (
-          <a href="/books" key={book.id} className="bg-white hover:cursor-pointer rounded-lg overflow-hidden hover:scale-95 transition-all duration-300">
+          <Link href="/books" key={book.id} className="bg-white hover:cursor-pointer rounded-lg overflow-hidden hover:scale-95 transition-all duration-300">
             <Image 
               src={book.image} 
               alt={book.title} 
@@ -39,7 +40,7 @@ const BookList = () => {
             <div className="pt-2 line-clamp-2 text-base">
               <h3 className="text-sm font-medium text-gray-800">{book.title}</h3>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
