@@ -7,9 +7,9 @@ import Image from "next/image";
 
 export function MySlide() {
   const images = [
-    { id: "1", image: "/assets/images/slide1.png", alt: "Slide 1" },
-    // { id: "2", image: "/assets/images/slide2.webp", alt: "Slide 2" },
-    { id: "3", image: "/assets/images/slide3.png", alt: "Slide 3" },
+    { id: "1", image: "/assets/images/slide1.jpg", alt: "Slide 1" },
+    { id: "2", image: "/assets/images/slide2.jpg", alt: "Slide 2" },
+    { id: "3", image: "/assets/images/slide3.jpg", alt: "Slide 3" },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -46,8 +46,6 @@ export function MySlide() {
           ))}
         </div>
       </div>
-      
-
       {/* Dot Navigation */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (

@@ -20,16 +20,16 @@ const MyLayout = () => {
           <a href='/' className="flex-1 flex gap-2 items-center text-base  md:text-xl lg:text-xl text-white text-center">
             
             <Image
-              src="/assets/images/logo.png"
+              src="/assets/images/rule.png"
               width={90}
               height={90}
               alt="logo"
               className="w-14 h-16 md:w-20 md:h-24"
             />
             <p className="font-semibold">
-              វិទ្យាស្ថានជាតិអប់រំ
+            សាកលវិទ្យាល័យភូមិន្ទនីតិសាស្រ្ដ និងវិទ្យាសាស្រ្ដសេដ្ឋកិច្ច
               <br />
-              <span className="font-normal">National Institute Of Education{" "}</span> 
+              <span className="font-normal">Royal University of Law and Economics{" "}</span> 
             </p>
           </a>
          <MyHeader/>
