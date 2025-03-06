@@ -1,4 +1,4 @@
-import MyLayout from '@/components/header/my-layout';
+import MyLayout from '@/components/header/my-header';
 import React from 'react';
 
 const MyView = () => {

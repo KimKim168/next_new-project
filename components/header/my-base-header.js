@@ -5,15 +5,9 @@ import MyHeader from './my-header'
 import MyMenuHeader from './my-menu-header'
 import { MyLanguageSwitcher } from '../my-language-switcher'
 
-const MyLayout = () => {
+const MyBaseHeader = () => {
   return (
     <div>
-       <div className="flex items-center justify-end gap-2 max-w-screen-2xl px-5 sm:px-10 xl:px-20 mt-1">
-        <MyLanguageSwitcher/>
-        <Phone width={15} height={15} />
-        <p>010 775589 -</p>
-        <User/><a href="#"> Student Login</a>
-      </div>
       {/* nav and slide */}
       <div className=" mt-1 bg-[#393838]">
         <div className="max-w-screen-2xl py-5 mx-auto px-5 sm:px-10 xl:px-20 flex items-center">
@@ -32,7 +26,7 @@ const MyLayout = () => {
               <span className="font-normal">Royal University of Law and Economics{" "}</span> 
             </p>
           </a>
-         <MyHeader/>
+
          <MyMenuHeader/>
         </div>
       </div>
@@ -40,4 +34,4 @@ const MyLayout = () => {
   )
 }
 
-export default MyLayout
+export default MyBaseHeader

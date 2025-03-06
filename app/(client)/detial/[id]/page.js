@@ -1,8 +1,17 @@
 import MyBaseHeader from '@/components/header/my-base-header';
+import { BASE_API_URL, IMAGE_PAGES_URL } from '@/env';
 import React from 'react';
 
-const page = () => {
+const page = async ({params}) => {
 
+    const { id } = await params;
+    
+    // console.log(id)
+
+    const respone = await fetch(`${BASE_API_URL}/pages/${id}`);
+
+    const data = await respone.json();
+//    console.log(data)
 
   return (
     <>
@@ -12,16 +21,16 @@ const page = () => {
       <div className=' flex-1 p-6 xl:pl-20'>
         <div className='flex flex-col '>
             <div>
-            <h1 className='text-2xl font-bold mb-4'>Good to Great: Why Some Companies Make the Leap...And Others Don't</h1>
+            <h1 className='text-2xl font-bold mb-4'>{data.name}</h1>
             </div>
         <img 
-          src='/assets/images/book4.webp' 
+          src={`${IMAGE_PAGES_URL}${data.image}`} 
           alt='Placeholder' 
           className='w-[50%] h-auto aspect-[6/9] rounded-lg shadow-md my-5'
         />
          <p className='text-gray-700 mb-2 text-xl'>
-            Becoming good at reading requires a combination of consistent practice and the right approach. Start by choosing materials that genuinely interest you, as this makes reading enjoyable and keeps you motivated. Set aside dedicated time each day to read, even if it’s just a few pages, to build a habit. Improve your comprehension by reading actively—highlight key points, take notes, or summarize what you’ve read to reinforce understanding. Expanding your vocabulary through context or by looking up unfamiliar words also enhances your reading skills. Lastly, challenge yourself by exploring different genres and more complex texts over time to broaden your knowledge and adaptability as a reader.
-            </p>
+            {data.description}
+        </p>
         </div>
       </div>
 

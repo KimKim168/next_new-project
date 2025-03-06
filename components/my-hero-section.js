@@ -4,7 +4,7 @@ import { BASE_API_URL, IMAGE_PAGES_URL } from "@/env";
 
 const MyHeroSection = async () => {
   const respone = await fetch(`${BASE_API_URL}/pages?position=hero_sections`, {
-    next: { revalidate: 600 },
+    next: { revalidate: 3600 },
   });
   const result = await respone.json();
   // console.log(result)

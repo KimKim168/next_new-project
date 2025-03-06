@@ -4,7 +4,7 @@ import { BASE_API_URL, IMAGE_PAGES_URL } from '@/env';
 
 const MyDatabases = async () => {
     const respone = await fetch(`${BASE_API_URL}/pages?position=databases`, {
-        next: { revalidate: 600 },
+        next: { revalidate: 3600 },
       });
   const result = await respone.json();
 //   console.log(result)
@@ -13,9 +13,9 @@ const MyDatabases = async () => {
         <div className="flex">
           <h2
             className="text-xl md:text-2xl text-center lg:text-2xl text-black my-5 tracking-wide 
-  after:content-[''] after:block after:w-24 md:after:w-32 after:h-1 after:bg-red-500 
-  after:mx-auto after:mt-2 after:transition-all after:duration-300 
-  hover:after:w-28 md:hover:after:w-36"
+            after:content-[''] after:block after:w-24 md:after:w-32 after:h-1 after:bg-red-500 
+            after:mx-auto after:mt-2 after:transition-all after:duration-300 
+            hover:after:w-28 md:hover:after:w-36"
           >
             Our Databases
           </h2>
@@ -25,7 +25,7 @@ const MyDatabases = async () => {
           {/* Repeat this block for each category */}
           {
             result?.map((item)=>(
-                <a href={item.link} key={item.id} target='_blank' className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
+                <a href={item.type == 'link' ? item.link : `/detial/${item.id}`} key={item.id}  className="flex-shrink-0 w-[20%] md:w-[15%] min-w-[100px] px-2 hover:bg-white py-4 rounded-md hover:text-black text-white">
                 <div className="flex flex-col items-center justify-center">
                   <Image
                     src={`${IMAGE_PAGES_URL}${item.image}`}

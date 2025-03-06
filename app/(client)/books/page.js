@@ -1,11 +1,11 @@
 import React from 'react'
 import MyView from './components/my-view';
-import MyLayout from '@/components/header/my-layout';
+import MyBaseHeader from '@/components/header/my-base-header';
 
 const page = () => {
   return (
     <div className='min-h-screen'>
-     <MyLayout/>
+     <MyBaseHeader/>
      <MyView/>
 
     </div>
