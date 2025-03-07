@@ -3,7 +3,9 @@ import Image from "next/image";
 import { BASE_API_URL, IMAGE_PAGES_URL } from "@/env";
 
 const MyHeroSection = async () => {
-  const respone = await fetch(`${BASE_API_URL}/pages?position=news`);
+  const respone = await fetch(`${BASE_API_URL}/pages?position=news`, {
+    next: { revalidate: 3600 },
+  });
   const result = await respone.json();
 
   // if(result.type == 'text'){

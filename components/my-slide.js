@@ -4,13 +4,16 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
+import { IMAGE_SLIDES_URL } from "@/env";
 
-export function MySlide() {
-  const images = [
-    { id: "1", image: "/assets/images/slide1.jpg", alt: "Slide 1" },
-    { id: "2", image: "/assets/images/slide2.jpg", alt: "Slide 2" },
-    { id: "3", image: "/assets/images/slide3.jpg", alt: "Slide 3" },
-  ];
+export function MySlide({images}) {
+
+  
+  // const images = [
+  //   { id: "1", image: "/assets/images/slide1.jpg", alt: "Slide 1" },
+  //   { id: "2", image: "/assets/images/slide2.jpg", alt: "Slide 2" },
+  //   { id: "3", image: "/assets/images/slide3.jpg", alt: "Slide 3" },
+  // ];
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -30,12 +33,12 @@ export function MySlide() {
       {/* Carousel */}
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {images.map((item) => (
+          {images?.map((item) => (
             <div key={item.id} className="flex-[0_0_100%]">
               <Card className="w-full rounded-none aspect-[32/9]">
                 <Image
-                  src={item.image}
-                  alt={item.alt}
+                  src={`${IMAGE_SLIDES_URL}${item.image}`}
+                  alt='slide'
                   width={1920}
                   height={540}
                   className="aspect-[32/9] object-cover"
@@ -48,7 +51,7 @@ export function MySlide() {
       </div>
       {/* Dot Navigation */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
-        {images.map((_, index) => (
+        {images?.map((_, index) => (
           <button
             key={index}
             className={`w-3 h-3 rounded-full transition ${

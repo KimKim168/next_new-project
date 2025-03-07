@@ -59,7 +59,7 @@ const MyMenuHeader = () => {
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
               <div className="border-t p-2">
-                <ul className="flex flex-col justify-center space-y-2 text-start text-black">
+                <ul className="flex flex-col justify-center space-y-4 text-start text-black">
                 <li className={`border-r pr-2 border-white`}>
           <Link 
             href="/" 

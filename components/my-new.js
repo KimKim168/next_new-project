@@ -35,7 +35,7 @@ const BookList = async () => {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
         {result.map((book) => (
-          <Link href={book.type == 'link' ? book.link : `/detial/${book.id}`} key={book.id} className="bg-white hover:cursor-pointer rounded-lg overflow-hidden hover:scale-95 transition-all duration-300">
+          <Link href={book.type == 'link' ? book.link : `/details/${book.id}`} key={book.id} className="bg-white hover:cursor-pointer rounded-lg overflow-hidden hover:scale-95 transition-all duration-300">
             <Image 
               src={`${IMAGE_PAGES_URL}${book.image}`} 
               alt='image' 
