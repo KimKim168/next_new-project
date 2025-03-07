@@ -1,7 +1,7 @@
 // const BASE_BACKEND_URL = "https://chhayhok.brolong.pro";
 // const APP_URL = "https://chhayhok.brolong.pro/";
-const BASE_BACKEND_URL = "http://127.0.0.1:8000";
-const APP_URL = "http://127.0.0.1:8000/";
+const BASE_BACKEND_URL = "https://rule.kimsoreya.site";
+const APP_URL = "https://rule.kimsoreya.site/";
 
 
 const IS_SHOW_KID_BOOKS = true;
