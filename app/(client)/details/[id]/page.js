@@ -39,9 +39,10 @@ const Page = async ({ params }) => {
               alt="Page Image"
               className="w-full lg:w-[80%] h-auto aspect-[6/9] rounded-lg shadow-md my-5"
             />
-            <p className="text-gray-700 mb-2 line-clamp-1 text-[12px] lg:text-xl">
-              {data.description}
-            </p>
+            <div
+              className="product-description prose max-w-none overflow-hidden"
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            ></div>
           </div>
         </div>
 
