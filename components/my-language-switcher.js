@@ -24,7 +24,7 @@ const languages = [
   {
     value: "en",
     label: "English",  // Flag for English
-    flag: "/assets/images/flageUk.png",  // Use the flag image URL or path here
+    flag: "/assets/images/en.png",  // Use the flag image URL or path here
   },
   {
     value: "kh",

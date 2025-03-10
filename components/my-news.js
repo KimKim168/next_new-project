@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
-import { BASE_API_URL, IMAGE_PAGES_URL } from "@/env";
+import { BASE_API_URL, IMAGE_PAGES_URL_THUMB } from "@/env";
 
 // const books = [
 //   {
@@ -45,7 +45,7 @@ const MyNews = async () => {
                 </div>
                 <CardItem translateZ="100" className="w-full mt-4 aspect-[16/9]">
                   <Image
-                    src={`${IMAGE_PAGES_URL}${item.image}`}
+                    src={`${IMAGE_PAGES_URL_THUMB}${item.image}`}
                     height={350}
                     width={350}
                     className="aspect-[16/9] w-full object-cover rounded-xl group-hover/card:shadow-xl"

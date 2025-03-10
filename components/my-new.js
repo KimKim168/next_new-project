@@ -1,4 +1,4 @@
-import { BASE_API_URL, IMAGE_PAGES_URL } from "@/env";
+import { BASE_API_URL, IMAGE_PAGES_URL_THUMB } from "@/env";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,7 +37,7 @@ const BookList = async () => {
         {result.map((book) => (
           <Link href={book.type == 'link' ? book.link : `/details/${book.id}`} key={book.id} className="bg-white hover:cursor-pointer rounded-lg overflow-hidden hover:scale-95 transition-all duration-300">
             <Image 
-              src={`${IMAGE_PAGES_URL}${book.image}`} 
+              src={`${IMAGE_PAGES_URL_THUMB}${book.image}`} 
               alt='image' 
               width={200} 
               height={300} 

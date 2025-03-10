@@ -8,9 +8,9 @@ import MyHeroSection from "@/components/my-hero-section";
 import MyDatabases from "@/components/my-databases";
 import MyBaseHeader from "@/components/header/my-base-header";
 import { BASE_API_URL } from "@/env";
+import MyTopHeader from "@/components/header/my-top-header";
 
 export default async function Home() {
-
   const slide = await fetch(`${BASE_API_URL}/slides`, {
     next: { revalidate: 3600 },
   });
@@ -18,16 +18,10 @@ export default async function Home() {
 
   return (
     <>
-      <div className="flex items-center justify-end gap-2 max-w-screen-2xl px-5 sm:px-10 xl:px-20 mt-1">
-        <MyLanguageSwitcher />
-        <Phone width={15} height={15} />
-        <p>010 775589 -</p>
-        <User />
-        <a href="#"> Student Login</a>
-      </div>
+     <MyTopHeader/>
       {/* nav and slide */}
-      <div className=" mt-1 bg-[#393838]">
-        <MyBaseHeader/>
+      <div className="mt-1 bg-[#393838]">
+        <MyBaseHeader />
         <div>
           <MySlide images={result} />
         </div>
@@ -42,7 +36,7 @@ export default async function Home() {
       {/*End Hero Section */}
 
       {/*Databases */}
-      <MyDatabases/>
+      <MyDatabases />
       {/*End Databases */}
       {/* New Book */}
       <BookList />

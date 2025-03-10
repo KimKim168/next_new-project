@@ -3,11 +3,14 @@ const nextConfig = {
     images:{
         remotePatterns:[
             {
-                // hostname:'images.unsplash.com',
-                // hostname: "127.0.0.1",
-                // port: "8000",
-                hostname:'rule.kimsoreya.site',
-
+                hostname: "127.0.0.1",
+                port: "8000",
+            },
+            {
+                hostname: "images.unsplash.com",
+            },
+            {
+                hostname: "rule.kimsoreya.site",
             }
         ]
     }

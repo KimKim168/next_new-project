@@ -1,4 +1,6 @@
 import MyBaseHeader from "@/components/header/my-base-header";
+import MyTopHeader from "@/components/header/my-top-header";
+import MyBanner from "@/components/my-banner";
 import { BASE_API_URL, IMAGE_PAGES_URL } from "@/env";
 import Image from "next/image";
 import React from "react";
@@ -20,8 +22,9 @@ const Page = async ({ params }) => {
 
   return (
     <>
+    <MyTopHeader/>
       <MyBaseHeader />
-      <div className="flex flex-col lg:flex lg:flex-row max-w-screen-2xl mx-auto px-6 xl:px-20">
+      <div className="flex flex-col gap-5 lg:flex lg:flex-row max-w-screen-2xl mx-auto px-6 xl:px-20">
         {/* Main Content */}
         <div className=" flex-1 py-6 xl:pl-20">
           <div className="flex flex-col">
@@ -37,8 +40,9 @@ const Page = async ({ params }) => {
               width={600}
               height={900}
               alt="Page Image"
-              className="w-full lg:w-[80%] h-auto aspect-[6/9] rounded-lg shadow-md my-5"
+              className="w-full  h-auto aspect-[6/9] object-cover rounded-lg shadow-md mb-5 mt-2"
             />
+           
             <div
               className="product-description prose max-w-none overflow-hidden"
               dangerouslySetInnerHTML={{ __html: data.description }}
@@ -48,24 +52,7 @@ const Page = async ({ params }) => {
 
         {/* Sticky Sidebar */}
         <div className="flex lg:flex-col items-center gap-5   my-10 lg:my-20">
-          <div className="flex-1 w-40 lg:w-80">
-            <Image
-              src="/assets/images/banner1.png"
-              width={900}
-              height={3200}
-              alt="Banner"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="flex-1 w-40 lg:w-80">
-            <Image
-              src="/assets/images/banner2.png"
-              width={900}
-              height={3200}
-              alt="Banner"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <MyBanner/>
         </div>
       </div>
     </>
